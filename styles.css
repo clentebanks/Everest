@@ -1,0 +1,34 @@
+li:hover{
+    border-radius: 3px;
+    border: 0.8px solid white;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+.container-1{
+    position: absolute;
+    z-index: 1;
+    top: 230px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom, transparent, #eaeded 30%);
+}
+.section1{
+    background-color: white;
+    height:400px;
+}
+/*CARUSEL*/
+.owl-carousel{
+    background: transparent;
+}
+.owl-carousel .item{
+    background: transparent;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
