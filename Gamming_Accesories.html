@@ -1,0 +1,833 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gamming Accesories</title>
+    <!-- Favicon and Touch Icons -->
+    <link href="/assets/logo/logotipo.ico" rel="shortcut icon" type="image/png">
+    <link href="/assets/logo/logotipo.ico" rel="apple-touch-icon">
+    <link href="/assets/logo/logotipo.ico" rel="apple-touch-icon" sizes="72x72">
+    <link href="/assets/logo/logotipo.ico" rel="apple-touch-icon" sizes="114x114">
+    <link href="/assets/logo/logotipo.ico" rel="apple-touch-icon" sizes="144x144">
+    <!--bootstrap5-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!--estilos-->
+    <link rel="stylesheet" href="/styles.css">
+    <!--OWL CARUSEL owl-->
+    <link rel="stylesheet" href="/owl.carousel.min.css">
+    <link rel="stylesheet" href="/owl.theme.default.min.css">
+    <style>
+        :root {
+      --black: #3a3a3a;
+      --white: #fff;
+      --green: #49b293;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+    
+    ol {
+      list-style: none;
+    }
+    
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    /* body {
+      margin: 50px 0;
+      color: var(--black);
+      font: 1rem/1.3 sans-serif;
+    } */
+    
+    .author-archive {
+      padding: 1.5rem;
+    }
+    
+    /* .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    } */
+    
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    
+    h1 a {
+      transition: all 0.1s;
+    }
+    
+    h1 a:hover {
+      background: var(--green);
+      color: var(--white);
+    }
+    
+    input[type="radio"] {
+      position: absolute;
+      left: -9999px;
+    }
+    
+    
+    /* FILTERS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+    .filters {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    
+    .filters * {
+      display: inline-block;
+    }
+    
+    .filters label {
+      padding: 0.5rem 1rem;
+      margin-bottom: 0.25rem;
+      border-radius: 2rem;
+      min-width: 50px;
+      line-height: normal;
+      cursor: pointer;
+      transition: all 0.1s;
+    }
+    
+    .filters label:hover {
+      background: #ffab07;
+      color: var(--white);
+    }
+    
+    
+    /* FILTERED ELEMENTS (POSTS)
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+    .posts {
+      display: grid;
+      grid-gap: 1.5rem;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .posts .post {
+      background: #fafafa;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    
+    .posts .post-title {
+      font-size: 1.3rem;
+    }
+    
+    .posts .post-title:hover {
+      text-decoration: underline;
+    }
+    
+    .posts figcaption {
+      padding: 1rem;
+    }
+    
+    .posts .post-categories {
+      margin-bottom: 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    .posts .post-categories * {
+      display: inline-block;
+    }
+    
+    .posts .post-categories li {
+      margin-bottom: 0.2rem;
+    }
+    
+    .posts .post-categories a {
+      padding: 0.2rem 0.5rem;
+      border-radius: 1rem;
+      border: 1px solid;
+      line-height: normal;
+      transition: all 0.1s;
+    }
+    
+    .posts .post-categories a:hover {
+      background: #ffab07;
+      color: var(--white);
+    }
+    
+    
+    /* FILTERING RULES
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+    [value="All"]:checked ~ .filters [for="All"],
+    [value="HEADSETS"]:checked ~ .filters [for="HEADSETS"],
+    [value="KEYBOARD"]:checked ~ .filters [for="KEYBOARD"],
+    [value="MOUSE"]:checked ~ .filters [for="MOUSE"],
+    [value="CHAIR"]:checked ~ .filters [for="CHAIR"],
+    [value="MEDIO_AMBIENTE"]:checked ~ .filters [for="MEDIO_AMBIENTE"],
+    [value="GASTRONOMIA"]:checked ~ .filters [for="GASTRONOMIA"] {
+      background: #ffab07;
+      color: var(--white);
+    }
+    
+    [value="All"]:checked ~ .posts [data-category] {
+      display: block;
+    }
+    
+    [value="HEADSETS"]:checked ~ .posts .post:not([data-category~="HEADSETS"]),
+    [value="KEYBOARD"]:checked ~ .posts .post:not([data-category~="KEYBOARD"]),
+    [value="MOUSE"]:checked ~ .posts .post:not([data-category~="MOUSE"]),
+    [value="CHAIR"]:checked ~ .posts .post:not([data-category~="CHAIR"]),
+    [value="MEDIO_AMBIENTE"]:checked ~ .posts .post:not([data-category~="MEDIO_AMBIENTE"]),
+    [value="GASTRONOMIA"]:checked ~ .posts .post:not([data-category~="GASTRONOMIA"]) {
+      display: none;
+    }
+    
+    
+    /* FOOTER
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+    /* footer {
+      font-size: 1rem;
+      padding: 0 1.5rem;
+      text-align: right;
+    } */
+    
+    /* footer span {
+      color: #e31b23;
+    } */
+    
+    
+    /* MQ
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+    @media screen and (max-width: 900px) {
+      .posts {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    @media screen and (max-width: 650px) {
+      html {
+        font-size: 14px;
+      }
+    
+      .posts {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+    </style>
+</head>
+  <body>
+    <!--NAVBAR-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/index.html"><img style="border-radius:10px ;" src="/assets/logo/logotipo.png" alt="Logo" width="80" height="34" class="d-inline-block align-text-top"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Today's Deal</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Customer Service</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Registry</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Gift Cards</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Sell</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+            
+              <button class="btn btn-outline-danger" type="submit">Shop Halloween</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+     <!-- HEADER CON SLIDE FULL PANATALLA -->
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12" style="padding-left: 0; padding-right:0; "    >
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="https://m.media-amazon.com/images/I/6138dCMwqPL._SX3000_.jpg" class="d-block w-100 img-fluid" alt="1">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="https://m.media-amazon.com/images/I/61jovjd+f9L._SX3000_.jpg" class="d-block w-100 img-fluid" alt="2">
+                          </div>
+                          <div class="carousel-item">
+                            <img  src="https://m.media-amazon.com/images/I/61DUO0NqyyL._SX3000_.jpg" class="d-block w-100 img-fluid" alt="3">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="https://m.media-amazon.com/images/I/71qid7QFWJL._SX3000_.jpg" class="d-block w-100 img-fluid" alt="4">
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="container-1">
+        <div class="container">
+            <div class="row mt-5">
+                  <!-- Start main-content -->
+                <div class="main-content">
+                    <!-- Section: Courses -->
+                    <section id="courses" class="bg-silver-light">
+                        <div class="container" style="padding-top:10px;">
+                            <section class="author-archive">
+                                <div class="container">
+                                <h1>Gamming Accesories</h1>
+                                <input type="radio" id="All" name="categories" value="All" checked>
+                                <input type="radio" id="HEADSETS" name="categories" value="HEADSETS">
+                                <input type="radio" id="KEYBOARD" name="categories" value="KEYBOARD">
+                                <input type="radio" id="MOUSE" name="categories" value="MOUSE">
+                                <input type="radio" id="CHAIR" name="categories" value="CHAIR">
+                                <input type="radio" id="MEDIO_AMBIENTE" name="categories" value="MEDIO_AMBIENTE">
+                                <input type="radio" id="GASTRONOMIA" name="categories" value="GASTRONOMIA">
+                            
+                                <ol class="filters">
+                                    <li style="border: none !important;">
+                                    <label  for="All">All</label>
+                                    </li>
+                                    <li style="border: none !important;">
+                                    <label for="HEADSETS">HEADSETS</label>
+                                    </li>
+                                    <li style="border: none !important;">
+                                    <label for="KEYBOARD">KEYBOARD</label>
+                                    </li>
+                                    <li style="border: none !important;">
+                                    <label for="MOUSE">MOUSE</label>
+                                    </li>
+                                    <li style="border: none !important;">
+                                    <label for="CHAIR">CHAIR</label>
+                                    </li>
+                                    <li style="border: none !important;">
+                                    <label for="MEDIO_AMBIENTE">MEDIO AMBIENTE</label>
+                                    </li>
+                                    <li style="border: none !important;">
+                                    <label for="GASTRONOMIA">GASTRONOMÍA</label>
+                                    </li>
+                                </ol>
+                            
+                                <ol class="posts">
+                                    <!--Inglés Funcional Amateur-->
+                                    <li class="post course-thumb" data-category="HEADSETS">
+                                    <span class="price-tag">$79.99</span>
+                                    <article>
+                                        <figure>
+                                        <a href="https://amzn.to/3Dyz3xT" target="_blank">
+                                            <img class="img'fluid" src="https://m.media-amazon.com/images/I/719lECTBXHL._AC_SY355_.jpg" alt="">
+                                        </a>
+                                        <figcaption> 
+                                            <h2 class="post-title">
+                                            <a href="https://amzn.to/3Dyz3xT" target="_blank">Razer BlackShark V2 
+                                            </a>
+                                            </h2>
+                                        </figcaption>
+                                        </figure>
+                                    </article>
+                                    </li>
+                                    <!--RAIO-->
+                                    <li class="post course-thumb" data-category="HEADSETS">
+                                    <span class="price-tag">$92.31</span>
+                                    <article>
+                                        <figure>
+                                        <a href="https://amzn.to/3QXchmf" target="_blank">
+                                            <img class="img-fluid" src="https://m.media-amazon.com/images/I/71xei5TWy8L._AC_SY355_.jpg" alt="">
+                                        </a>
+                                        <figcaption>
+                                            <h2 class="post-title">
+                                            <a href="https://amzn.to/3QXchmf" target="_blank">Razer Kraken Ultimate RGB 
+                                            </a>
+                                            </h2>
+                                        </figcaption>
+                                        </figure>
+                                    </article>
+                                    </li>
+                                    <!--Curso Barista Training Online-->
+                                    <li class="post course-thumb" data-category="GASTRONOMIA">
+                                    <span class="price-tag">$45,00</span>
+                                    <article>
+                                        <figure>
+                                        <a href="https://go.hotmart.com/T74005086G?dp=1" target="_blank">
+                                            <img src="/images/course/baristatrainingprofe.jpg" alt="">
+                                        </a>
+                                        <figcaption>
+                                            <ol class="post-categories">
+                                            <li>
+                                                <a href="">GASTRONOMIA</a>
+                                            </li>
+                                            <li>
+                                                <!-- <a href="">WordPress</a> -->
+                                            </li>
+                                            </ol>
+                                            <h2 class="post-title">
+                                            <a href="https://go.hotmart.com/T74005086G?dp=1" target="_blank">Curso Barista Training Online
+                                            </a>
+                                            </h2>
+                                        </figcaption>
+                                        </figure>
+                                    </article>
+                                    </li>
+                                    <!--Sublimación como Negocio-->
+                                    <li class="post course-thumb" data-category="KEYBOARD">
+                                    <span class="price-tag">$249.99</span>
+                                    <article>
+                                        <figure>
+                                        <a href="https://amzn.to/3RVFa3K" target="_blank">
+                                            <img src="https://m.media-amazon.com/images/I/71gFiEKcGpL._AC_SY355_.jpg" alt="">
+                                        </a>
+                                        <figcaption>
+                                           
+                                            <h2 class="post-title">
+                                            <a href="https://amzn.to/3RVFa3K" target="_blank">Razer DeathStalker V2 Pro
+                                            </a>
+                                            </h2>
+                                        </figcaption>
+                                        </figure>
+                                    </article>
+                                    </li>
+                                    <!--WhatsaMarketingPro-->
+                                    <li class="post course-thumb" data-category="CHAIR">
+                                    <span class="price-tag">$299.99</span>
+                                    <article>
+                                        <figure>
+                                        <a href="https://amzn.to/3LvLZ9B" target="_blank">
+                                            <img class="img-fluid p-3" src="https://m.media-amazon.com/images/I/61Qa2dIsUxL._AC_SX569_.jpg" alt="">
+                                        </a>
+                                        <figcaption>
+                                            
+                                            <h2 class="post-title">
+                                            <a href="https://amzn.to/3LvLZ9B" target="_blank">Razer Enki X Essential
+                                            </a>
+                                            </h2>
+                                        </figcaption>
+                                        </figure>
+                                    </article>
+                                    </li>
+                                    <!--Programa Profesional en Estadistíca Espacial-->
+                                    <li class="post course-thumb" data-category="MEDIO_AMBIENTE">
+                                    <span class="price-tag">$79,00</span>
+                                    <article>
+                                        <figure>
+                                        <a href="https://go.hotmart.com/W74124924U?dp=1" target="_blank">
+                                            <img src="/images/course/sm3.JPG" alt="">
+                                        </a>
+                                        <figcaption>
+                                            <ol class="post-categories">
+                                            <li>
+                                                <a href="">MEDIO AMBIENTE</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Estadistíca Espacial</a>
+                                            </li>
+                                            </ol>
+                                            <h2 class="post-title">
+                                            <a href="https://go.hotmart.com/W74124924U?dp=1" target="_blank">Programa Profesional en Estadistíca Espacial</a>
+                                            </h2>
+                                        </figcaption>
+                                        </figure>
+                                    </article>
+                                    </li>
+                                    <!--Casas Solares-->
+                                    <li class="post course-thumb" data-category="MOUSE">
+                                    <span class="price-tag">$152.13</span>
+                                    <article>
+                                        <figure>
+                                        <a href="https://amzn.to/3dyYnZQ" target="_blank">
+                                            <img src="https://m.media-amazon.com/images/I/81RVa1qNBKL._AC_SX466_.jpg" alt="">       
+                                        </a>
+                                        <figcaption>
+                                            
+                                            <h2 class="post-title">
+                                            <a href="https://amzn.to/3dyYnZQ" target="_blank">ASUS ROG Spatha X Wireless
+                                            </a>
+                                            </h2>
+                                        </figcaption>
+                                        </figure>
+                                    </article>
+                                    </li>
+                                    <!--Monetiza TikTok e Instagram-->
+                                    <li class="post course-thumb" data-category="CHAIR">
+                                    <span class="price-tag">$499.99</span>
+                                    <article>
+                                        <figure>
+                                        <a href="https://amzn.to/3ShcstP" target="_blank">
+                                            <img class="img-fluid p-3" src="https://m.media-amazon.com/images/I/61UxlbOCDiL._AC_SX425_.jpg" alt="">
+                                        </a>
+                                        <figcaption>
+                                            
+                                            <h2 class="post-title">
+                                            <a href="https://amzn.to/3ShcstP" target="_blank">Razer Iskur Gaming Chair: Ergonomic Lumbar Support
+                                            </a>
+                                            </h2>
+                                        </figcaption>
+                                        </figure>
+                                    </article>
+                                    </li>
+                                    <!--Monetiza TikTok e Instagram-->
+                                    <li class="post course-thumb" data-category="CHAIR">
+                                        <span class="price-tag">$262.14</span>
+                                        <article>
+                                            <figure>
+                                            <a href="https://amzn.to/3S0SLGU" target="_blank">
+                                                <img class="img-fluid p-3" src="https://m.media-amazon.com/images/I/61oOnqhGXjL._AC_SX466_.jpg" alt="">
+                                            </a>
+                                            <figcaption>
+                                                
+                                                <h2 class="post-title">
+                                                <a href="https://amzn.to/3S0SLGU" target="_blank">RESPAWN 110 Ergonomic
+                                                </a>
+                                                </h2>
+                                            </figcaption>
+                                            </figure>
+                                        </article>
+                                        </li>
+                                        <!--Monetiza TikTok e Instagram-->
+                                    <li class="post course-thumb" data-category="CHAIR">
+                                        <span class="price-tag">$99.98</span>
+                                        <article>
+                                            <figure>
+                                            <a href="https://amzn.to/3f0iGjm" target="_blank">
+                                                <img class="img-fluid p-3" src="https://m.media-amazon.com/images/I/61t4mpabO+L._AC_SX569_.jpg" alt="">
+                                            </a>
+                                            <figcaption>
+                                                
+                                                <h2 class="post-title">
+                                                <a href="https://amzn.to/3f0iGjm" target="_blank">High-Back Gaming Chair 
+                                                </a>
+                                                </h2>
+                                            </figcaption>
+                                            </figure>
+                                        </article>
+                                        </li>
+                                    <!--Curso Coctelería Clásica Online-->
+                                    <li class="post course-thumb" data-category="GASTRONOMIA">
+                                    <span class="price-tag">$45,00</span>
+                                    <article>
+                                        <figure>
+                                        <a href="https://go.hotmart.com/C74007594M?dp=1" target="_blank">
+                                            <img src="/images/course/cocteleriaclasicaprofe.jpg" alt="">
+                                        </a>
+                                        <div class="price-tag">$49,99</div>
+                                        <figcaption>
+                                            <ol class="post-categories">
+                                            <li>
+                                                <a href="">GASTRONOMÍA</a>
+                                            </li>
+                                            <li>
+                                                <a href="">COCTELERÍA</a>
+                                            </li>
+                                            <li>
+                                                <!-- <a href="">Slider</a> -->
+                                            </li>
+                                            </ol>
+                                            <h2 class="post-title">
+                                            <a href="https://go.hotmart.com/C74007594M?dp=1" target="_blank">Curso Coctelería Clásica Online
+                                            </a>
+                                            </h2>
+                                        </figcaption>
+                                        </figure>
+                                    </article>
+                                    </li>
+                                    <!--Curso Completo Vocabulario Inglés-->
+                                    <li class="post course-thumb" data-category="HEADSETS">
+                                    <span class="price-tag">$44.99</span>
+                                    <article>
+                                        <figure>
+                                        <a href="https://amzn.to/3BTpacR" target="_blank">
+                                            <img src="https://m.media-amazon.com/images/I/714MA-nfi3L._AC_SX466_.jpg" alt="">
+                                        </a>
+                                        <figcaption>
+                                            
+                                            <h2 class="post-title">
+                                            <a href="https://amzn.to/3BTpacR" target="_blank">Razer Kraken
+                                            </a>
+                                            </h2>
+                                        </figcaption>
+                                        </figure>
+                                    </article>
+                                    </li>
+                                    <!--Decoración de fiestas por Samantha-->
+                                    <li class="post course-thumb" data-category="KEYBOARD">
+                                    <span class="price-tag">$69.99</span>
+                                    <article>
+                                        <figure>
+                                        <a href="https://amzn.to/3SlNbyJ" target="_blank">
+                                            <img src="https://m.media-amazon.com/images/I/61cUqBnGuqL._AC_SX679_.jpg" alt="">
+                                        </a>
+                                        <figcaption>
+                                            
+                                            <h2 class="post-title">
+                                            <a href="https://amzn.to/3SlNbyJ" target="_blank">Razer - mini 60 % Huntsman
+                                            </a>
+                                            </h2>
+                                        </figcaption>
+                                        </figure>
+                                    </article>
+                                    </li>
+                                    <!--Diseño de Joyería y Accesorios en Resina-->
+                                    <li class="post course-thumb" data-category="KEYBOARD">
+                                    <span class="price-tag">$219.99</span>
+                                    <article>
+                                        <figure>
+                                        <a href="https://amzn.to/3qO7bhA" target="_blank">
+                                            <img src="https://m.media-amazon.com/images/I/914fLOxM0hL._AC_SX466_.jpg" alt="">
+                                        </a>
+                                        <figcaption>
+                                            
+                                            <h2 class="post-title">
+                                            <a href="https://amzn.to/3qO7bhA" target="_blank">ASUS ROG Strix Flare II Animate
+                                            </a>
+                                            </h2>
+                                        </figcaption>
+                                        </figure>
+                                    </article>
+                                    </li>
+                                    <!--Diseño y Decoración con Globos-->
+                                    <li class="post course-thumb" data-category="KEYBOARD">
+                                    <span class="price-tag">$99.99</span>
+                                    <article>
+                                        <figure>
+                                        <a href="https://amzn.to/3eRfLt9" target="_blank">
+                                            <img src="https://m.media-amazon.com/images/I/61J+rHjfFoL._AC_SY355_.jpg" alt="">
+                                        </a>
+                                        <figcaption>
+                                            
+                                            <h2 class="post-title">
+                                            <a href="https://amzn.to/3eRfLt9" target="_blank">ASUS ROG Strix Scope NX TKL Deluxe 
+                                            </a>
+                                            </h2>
+                                        </figcaption>
+                                        </figure>
+                                    </article>
+                                    </li>
+                                    <!--El Negocio de la Decoración con Globos-->
+                                    <li class="post course-thumb" data-category="KEYBOARD">
+                                    <span class="price-tag">$88.77</span>
+                                    <article>
+                                        <figure>
+                                        <a href="https://amzn.to/3drlGVv" target="_blank">
+                                            <img src="https://m.media-amazon.com/images/I/81QEX6i2K-L._AC_SX466_.jpg" alt="">
+                                        </a>
+                                        <figcaption>
+                                           
+                                            <h2 class="post-title">
+                                            <a href="https://amzn.to/3drlGVv" target="_blank">SteelSeries Apex 5 Hybrid Mechanical 
+                                            </a>
+                                            </h2>
+                                        </figcaption>
+                                        </figure>
+                                    </article>
+                                    </li>
+                                    <!--Globos para Fiestas y Eventos-->
+                                    <li class="post course-thumb" data-category="KEYBOARD">
+                                    <span class="price-tag">$157.99</span>
+                                    <article>
+                                        <figure>
+                                        <a href="https://amzn.to/3QY6Pjd" target="_blank">
+                                            <img src="https://m.media-amazon.com/images/I/71y3EdgHaXL._AC_SX679_.jpg" alt="">
+                                        </a>
+                                        <figcaption>
+                                            
+                                            <h2 class="post-title">
+                                            <a href="https://amzn.to/3QY6Pjd" target="_blank">Alienware Low-Profile RGB
+                                            </a>
+                                            </h2>
+                                        </figcaption>
+                                        </figure>
+                                    </article>
+                                    </li>
+                                    <!--Inglés Sin Límites-->
+                                    <li class="post course-thumb" data-category="HEADSETS">
+                                    <span class="price-tag">$64.50</span>
+                                    <article>
+                                        <figure>
+                                        <a href="https://amzn.to/3UlwKnH" target="_blank">
+                                            <img src="https://m.media-amazon.com/images/I/71vEtZJpOLL._AC_SY355_.jpg" alt="">
+                                        </a>
+                                        <figcaption>
+                                            
+                                            <h2 class="post-title">
+                                            <a href="https://amzn.to/3UlwKnH" target="_blank">Logitech G 635 DTS, X 7.1
+                                            </a>
+                                            </h2>
+                                        </figcaption>
+                                        </figure>
+                                    </article>
+                                    </li>
+                                    <!--Membresia Global Escuela Ambiental GIS-->
+                                    <li class="post course-thumb" data-category="MOUSE">
+                                    <span class="price-tag">$136.09</span>
+                                    <article>
+                                        <figure>
+                                        <a href="https://amzn.to/3BSnnVf" target="_blank">
+                                            <img class="img-fluid mt-3" src="https://m.media-amazon.com/images/I/7116U9cSW2L._AC_SX466_.jpg" alt="">
+                                        </a>
+                                        <figcaption>
+                                           
+                                            <h2 class="post-title">
+                                            <a href="https://amzn.to/3BSnnVf" target="_blank">HyperX QuadCast - USB Condenser Gaming Microphone and HyperX Pulsefire Surge - RGB Wired Optical Gaming Mouse
+                                            </a>
+                                            </h2>
+                                        </figcaption>
+                                        </figure>
+                                    </article>
+                                    </li>
+                                    <!--MULTICOMISIONES-->
+                                    <li class="post course-thumb" data-category="KEYBOARD">
+                                    <span class="price-tag">$69.99</span>
+                                    <article>
+                                        <figure>
+                                        <a href="https://amzn.to/3SigUsk" target="_blank">
+                                            <img class="mt-5" src="https://m.media-amazon.com/images/I/71T2YLZ+UPL._AC_SY450_.jpg" alt="">
+                                        </a>
+                                        <figcaption>
+                                            
+                                            <h2 class="post-title">
+                                            <a href="https://amzn.to/3SigUsk" target="_blank">Alienware - AW310K Mechanical
+                                            </a>
+                                            </h2>
+                                        </figcaption>
+                                        </figure>
+                                    </article>
+                                    </li>
+                                    <!--Neuroaprendizaje de Inglés WITIX-->
+                                    <li class="post course-thumb" data-category="HEADSETS">
+                                    <span class="price-tag">$77.48</span>
+                                    <article>
+                                        <figure>
+                                        <a href="https://amzn.to/3Umilrq" target="_blank">
+                                            <img src="https://m.media-amazon.com/images/I/612xSI0hfZL._AC_SY355_.jpg" alt="">
+                                        </a>
+                                        <figcaption>
+                                            
+                                            <h2 class="post-title">
+                                            <a href="https://amzn.to/3Umilrq" target="_blank">Logitech G432 DTS:X 7.1 Surround Sound Wired
+                                            </a>
+                                            </h2>
+                                        </figcaption>
+                                        </figure>
+                                    </article>
+                                    </li>
+                                    <!--Topografía con Drones-->
+                                    <li class="post course-thumb" data-category="MOUSE">
+                                    <span class="price-tag">$99.98</span>
+                                    <article>
+                                        <figure>
+                                        <a href="https://amzn.to/3QWhVFe" target="_blank">
+                                            <img class="img-fluid mt-3" src="https://m.media-amazon.com/images/I/6163iSO1ZrL._AC_SX466_.jpg" alt="">
+                                        </a>
+                                        <figcaption>
+                                            
+                                            <h2 class="post-title">
+                                            <a href="https://amzn.to/3QWhVFe" target="_blank">Alienware Wired/Wireless Gaming Mouse 610M-Light, Lunar Light
+                                            </a>
+                                            </h2>
+                                        </figcaption>
+                                        </figure>
+                                    </article>
+                                    </li>
+                                    <!--Wasendbot-->
+                                    <li class="post course-thumb" data-category="MOUSE">
+                                    <span class="price-tag">$149.99</span>
+                                    <article>
+                                        <figure>
+                                        <a href="https://amzn.to/3UAhtQj" target="_blank">
+                                            <img class="img-fluid" src="https://m.media-amazon.com/images/I/61EFGv0kF2L._AC_SY355_.jpg" alt="">
+                                        </a>
+                                        <figcaption>
+                                            
+                                            <h2 class="post-title">
+                                            <a href="https://amzn.to/3UAhtQj" target="_blank">Razer Viper V2 Pro HyperSpeed
+                                            </a>
+                                            </h2>
+                                        </figcaption>
+                                        </figure>
+                                    </article>
+                                    </li>
+                                    <!--Decoración con Globos por Samantha-->
+                                    <li class="post course-thumb" data-category="KEYBOARD">
+                                    <span class="price-tag">$60.98</span>
+                                    <article>
+                                        <figure>
+                                        <a href="https://amzn.to/3QXizlR" target="_blank">
+                                            <img class="mt-5" src="https://m.media-amazon.com/images/I/51j11Mi7XoL._AC_SX466_.jpg" alt="">
+                                        </a>
+                                        <figcaption>
+                                            
+                                            <h2 class="post-title">
+                                            <a href="https://amzn.to/3QXizlR" target="_blank">HyperX Cloud Stinger 
+                                            </a>
+                                            </h2>
+                                        </figcaption>
+                                        </figure>
+                                    </article>
+                                    </li>
+
+                                    <!--Aprende Neuroinglés con Witix-->
+                                    <li class="post course-thumb" data-category="HEADSETS">
+                                    <span class="price-tag">$339.98</span>
+                                    <article>
+                                        <figure>
+                                        <a href="https://amzn.to/3xAYxH7" target="_blank">
+                                            <img src="https://m.media-amazon.com/images/I/31y6jA3FMML.jpg" alt="">
+                                        </a>
+                                        <figcaption>
+                                        
+                                            <h2 class="post-title">
+                                            <a href="https://amzn.to/3xAYxH7" target="_blank">ASTRO Gaming A50 Wireless + Base Station
+                                            </a>
+                                            </h2>
+                                        </figcaption>
+                                        </figure>
+                                    </article>
+                                    </li>
+                                </ol>
+                                
+                                </div>
+                            </section>
+                            
+                        </div>
+                    </section>
+                </div>
+                  <!-- end main-content -->
+            </div>
+        </div>
+        <div class="container-fluid bg-dark mt-5">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+              <p class="col-md-4 mb-0 text-muted">© 2022 Everest</p>
+          
+              <a class="navbar-brand" href="#"> <img style="border-radius:10px ;" src="/assets/logo/logotipo.png" alt="Logo" width="80" height="34" class="d-inline-block align-text-top"></a>
+          
+              <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+              </ul>
+            </footer>
+        </div>
+    </main>
+ 
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="/scripts.js" ></script>
+
+    <!--OWL CARUSEL-->
+    <script src="jquery.min.js"></script>
+    <script src="/owl.carousel.min.js"></script>
+    <script src="/main.js" ></script>
+</body>
+</html>
