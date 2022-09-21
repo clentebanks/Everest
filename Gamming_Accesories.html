@@ -165,7 +165,7 @@
     [value="KEYBOARD"]:checked ~ .filters [for="KEYBOARD"],
     [value="MOUSE"]:checked ~ .filters [for="MOUSE"],
     [value="CHAIR"]:checked ~ .filters [for="CHAIR"],
-    [value="MEDIO_AMBIENTE"]:checked ~ .filters [for="MEDIO_AMBIENTE"],
+    [value="LAPTOP"]:checked ~ .filters [for="LAPTOP"],
     [value="GASTRONOMIA"]:checked ~ .filters [for="GASTRONOMIA"] {
       background: #ffab07;
       color: var(--white);
@@ -179,7 +179,7 @@
     [value="KEYBOARD"]:checked ~ .posts .post:not([data-category~="KEYBOARD"]),
     [value="MOUSE"]:checked ~ .posts .post:not([data-category~="MOUSE"]),
     [value="CHAIR"]:checked ~ .posts .post:not([data-category~="CHAIR"]),
-    [value="MEDIO_AMBIENTE"]:checked ~ .posts .post:not([data-category~="MEDIO_AMBIENTE"]),
+    [value="LAPTOP"]:checked ~ .posts .post:not([data-category~="LAPTOP"]),
     [value="GASTRONOMIA"]:checked ~ .posts .post:not([data-category~="GASTRONOMIA"]) {
       display: none;
     }
@@ -292,7 +292,7 @@
                                 <input type="radio" id="KEYBOARD" name="categories" value="KEYBOARD">
                                 <input type="radio" id="MOUSE" name="categories" value="MOUSE">
                                 <input type="radio" id="CHAIR" name="categories" value="CHAIR">
-                                <input type="radio" id="MEDIO_AMBIENTE" name="categories" value="MEDIO_AMBIENTE">
+                                <input type="radio" id="LAPTOP" name="categories" value="LAPTOP">
                                 <input type="radio" id="GASTRONOMIA" name="categories" value="GASTRONOMIA">
                             
                                 <ol class="filters">
@@ -312,11 +312,11 @@
                                     <label for="CHAIR">CHAIR</label>
                                     </li>
                                     <li style="border: none !important;">
-                                    <label for="MEDIO_AMBIENTE">MEDIO AMBIENTE</label>
+                                    <label for="LAPTOP">LAPTOP</label>
                                     </li>
-                                    <li style="border: none !important;">
+                                    <!-- <li style="border: none !important;">
                                     <label for="GASTRONOMIA">GASTRONOMÍA</label>
-                                    </li>
+                                    </li> -->
                                 </ol>
                             
                                 <ol class="posts">
@@ -326,7 +326,7 @@
                                     <article>
                                         <figure>
                                         <a href="https://amzn.to/3Dyz3xT" target="_blank">
-                                            <img class="img'fluid" src="https://m.media-amazon.com/images/I/719lECTBXHL._AC_SY355_.jpg" alt="">
+                                            <img class="img'fluid p-3" src="https://m.media-amazon.com/images/I/719lECTBXHL._AC_SY355_.jpg" alt="">
                                         </a>
                                         <figcaption> 
                                             <h2 class="post-title">
@@ -343,7 +343,7 @@
                                     <article>
                                         <figure>
                                         <a href="https://amzn.to/3QXchmf" target="_blank">
-                                            <img class="img-fluid" src="https://m.media-amazon.com/images/I/71xei5TWy8L._AC_SY355_.jpg" alt="">
+                                            <img class="img-fluid p-3" src="https://m.media-amazon.com/images/I/71xei5TWy8L._AC_SY355_.jpg" alt="">
                                         </a>
                                         <figcaption>
                                             <h2 class="post-title">
@@ -355,12 +355,12 @@
                                     </article>
                                     </li>
                                     <!--Curso Barista Training Online-->
-                                    <li class="post course-thumb" data-category="GASTRONOMIA">
+                                    <!-- <li class="post course-thumb" data-category="GASTRONOMIA">
                                     <span class="price-tag">$45,00</span>
                                     <article>
                                         <figure>
                                         <a href="https://go.hotmart.com/T74005086G?dp=1" target="_blank">
-                                            <img src="/images/course/baristatrainingprofe.jpg" alt="">
+                                            <img class="img-fluid p-3" src="/images/course/baristatrainingprofe.jpg" alt="">
                                         </a>
                                         <figcaption>
                                             <ol class="post-categories">
@@ -368,7 +368,7 @@
                                                 <a href="">GASTRONOMIA</a>
                                             </li>
                                             <li>
-                                                <!-- <a href="">WordPress</a> -->
+                                               
                                             </li>
                                             </ol>
                                             <h2 class="post-title">
@@ -378,14 +378,14 @@
                                         </figcaption>
                                         </figure>
                                     </article>
-                                    </li>
+                                    </li> -->
                                     <!--Sublimación como Negocio-->
                                     <li class="post course-thumb" data-category="KEYBOARD">
                                     <span class="price-tag">$249.99</span>
                                     <article>
                                         <figure>
                                         <a href="https://amzn.to/3RVFa3K" target="_blank">
-                                            <img src="https://m.media-amazon.com/images/I/71gFiEKcGpL._AC_SY355_.jpg" alt="">
+                                            <img class="img-fluid p-3"  src="https://m.media-amazon.com/images/I/71gFiEKcGpL._AC_SY355_.jpg" alt="">
                                         </a>
                                         <figcaption>
                                            
@@ -403,7 +403,7 @@
                                     <article>
                                         <figure>
                                         <a href="https://amzn.to/3LvLZ9B" target="_blank">
-                                            <img class="img-fluid p-3" src="https://m.media-amazon.com/images/I/61Qa2dIsUxL._AC_SX569_.jpg" alt="">
+                                            <img class="img-fluid p-3" class="img-fluid p-3" src="https://m.media-amazon.com/images/I/61Qa2dIsUxL._AC_SX569_.jpg" alt="">
                                         </a>
                                         <figcaption>
                                             
@@ -416,24 +416,17 @@
                                     </article>
                                     </li>
                                     <!--Programa Profesional en Estadistíca Espacial-->
-                                    <li class="post course-thumb" data-category="MEDIO_AMBIENTE">
-                                    <span class="price-tag">$79,00</span>
+                                    <li class="post course-thumb" data-category="LAPTOP">
+                                    <span class="price-tag">$854.99</span>
                                     <article>
                                         <figure>
-                                        <a href="https://go.hotmart.com/W74124924U?dp=1" target="_blank">
-                                            <img src="/images/course/sm3.JPG" alt="">
+                                        <a href="https://amzn.to/3dt2Woy" target="_blank">
+                                            <img class="img-fluid p-3" src="https://m.media-amazon.com/images/I/61ldNfgH46L._AC_SX679_.jpg" alt="">
                                         </a>
                                         <figcaption>
-                                            <ol class="post-categories">
-                                            <li>
-                                                <a href="">MEDIO AMBIENTE</a>
-                                            </li>
-                                            <li>
-                                                <a href="">Estadistíca Espacial</a>
-                                            </li>
-                                            </ol>
+                                           
                                             <h2 class="post-title">
-                                            <a href="https://go.hotmart.com/W74124924U?dp=1" target="_blank">Programa Profesional en Estadistíca Espacial</a>
+                                            <a href="https://amzn.to/3dt2Woy" target="_blank">Dell G15 15.6 Inch FHD 120Hz LED Gaming Laptop</a>
                                             </h2>
                                         </figcaption>
                                         </figure>
@@ -445,7 +438,7 @@
                                     <article>
                                         <figure>
                                         <a href="https://amzn.to/3dyYnZQ" target="_blank">
-                                            <img src="https://m.media-amazon.com/images/I/81RVa1qNBKL._AC_SX466_.jpg" alt="">       
+                                            <img class="img-fluid p-3" src="https://m.media-amazon.com/images/I/81RVa1qNBKL._AC_SX466_.jpg" alt="">       
                                         </a>
                                         <figcaption>
                                             
@@ -499,7 +492,7 @@
                                         <article>
                                             <figure>
                                             <a href="https://amzn.to/3f0iGjm" target="_blank">
-                                                <img class="img-fluid p-3" src="https://m.media-amazon.com/images/I/61t4mpabO+L._AC_SX569_.jpg" alt="">
+                                                <img  class="img-fluid p-3" src="https://m.media-amazon.com/images/I/61t4mpabO+L._AC_SX569_.jpg" alt="">
                                             </a>
                                             <figcaption>
                                                 
@@ -512,41 +505,69 @@
                                         </article>
                                         </li>
                                     <!--Curso Coctelería Clásica Online-->
-                                    <li class="post course-thumb" data-category="GASTRONOMIA">
+                                    <li class="post course-thumb" data-category="LAPTOP">
                                     <span class="price-tag">$45,00</span>
                                     <article>
                                         <figure>
-                                        <a href="https://go.hotmart.com/C74007594M?dp=1" target="_blank">
-                                            <img src="/images/course/cocteleriaclasicaprofe.jpg" alt="">
+                                        <a href="https://amzn.to/3LsMhhE" target="_blank">
+                                            <img class="img-fluid p-3" src="https://m.media-amazon.com/images/I/81PbOX7ZtaL._AC_SX679_.jpg" alt="">
                                         </a>
-                                        <div class="price-tag">$49,99</div>
+                                        <div class="price-tag">$1,099.99</div>
                                         <figcaption>
-                                            <ol class="post-categories">
-                                            <li>
-                                                <a href="">GASTRONOMÍA</a>
-                                            </li>
-                                            <li>
-                                                <a href="">COCTELERÍA</a>
-                                            </li>
-                                            <li>
-                                                <!-- <a href="">Slider</a> -->
-                                            </li>
-                                            </ol>
+                                            
                                             <h2 class="post-title">
-                                            <a href="https://go.hotmart.com/C74007594M?dp=1" target="_blank">Curso Coctelería Clásica Online
+                                            <a href="https://amzn.to/3LsMhhE" target="_blank">Lenovo - Legion 5 - Gaming Laptop
                                             </a>
                                             </h2>
                                         </figcaption>
                                         </figure>
                                     </article>
                                     </li>
+                                    <!--Curso Coctelería Clásica Online-->
+                                    <li class="post course-thumb" data-category="LAPTOP">
+                                      <span class="price-tag">$45,00</span>
+                                      <article>
+                                          <figure>
+                                          <a href="https://amzn.to/3BuLicg" target="_blank">
+                                              <img class="img-fluid p-3" src="https://m.media-amazon.com/images/I/91qC1uigAPL._AC_SX679_.jpg" alt="">
+                                          </a>
+                                          <div class="price-tag">$1,999.00</div>
+                                          <figcaption>
+                                              
+                                              <h2 class="post-title">
+                                              <a href="https://amzn.to/3BuLicg" target="_blank">Alienware M15-15.6" FHD Gaming Laptop Thin and Light
+                                              </a>
+                                              </h2>
+                                          </figcaption>
+                                          </figure>
+                                      </article>
+                                      </li>
+                                      <!--Curso Coctelería Clásica Online-->
+                                    <li class="post course-thumb" data-category="LAPTOP">
+                                      <span class="price-tag">$45,00</span>
+                                      <article>
+                                          <figure>
+                                          <a href="https://amzn.to/3qUuxlD" target="_blank">
+                                              <img class="img-fluid p-3" src="https://m.media-amazon.com/images/I/71IA+MeLP2L._AC_SX466_.jpg" alt="">
+                                          </a>
+                                          <div class="price-tag">$1,683.99</div>
+                                          <figcaption>
+                                              
+                                              <h2 class="post-title">
+                                              <a href="https://amzn.to/3qUuxlD" target="_blank">ASUS ROG Strix Scar 15 (2022) Gaming Laptop
+                                              </a>
+                                              </h2>
+                                          </figcaption>
+                                          </figure>
+                                      </article>
+                                      </li>
                                     <!--Curso Completo Vocabulario Inglés-->
                                     <li class="post course-thumb" data-category="HEADSETS">
                                     <span class="price-tag">$44.99</span>
                                     <article>
                                         <figure>
                                         <a href="https://amzn.to/3BTpacR" target="_blank">
-                                            <img src="https://m.media-amazon.com/images/I/714MA-nfi3L._AC_SX466_.jpg" alt="">
+                                            <img class="img-fluid p-3" src="https://m.media-amazon.com/images/I/714MA-nfi3L._AC_SX466_.jpg" alt="">
                                         </a>
                                         <figcaption>
                                             
@@ -564,7 +585,7 @@
                                     <article>
                                         <figure>
                                         <a href="https://amzn.to/3SlNbyJ" target="_blank">
-                                            <img src="https://m.media-amazon.com/images/I/61cUqBnGuqL._AC_SX679_.jpg" alt="">
+                                            <img class="img-fluid p-3" src="https://m.media-amazon.com/images/I/61cUqBnGuqL._AC_SX679_.jpg" alt="">
                                         </a>
                                         <figcaption>
                                             
@@ -582,7 +603,7 @@
                                     <article>
                                         <figure>
                                         <a href="https://amzn.to/3qO7bhA" target="_blank">
-                                            <img src="https://m.media-amazon.com/images/I/914fLOxM0hL._AC_SX466_.jpg" alt="">
+                                            <img class="img-fluid p-3" src="https://m.media-amazon.com/images/I/914fLOxM0hL._AC_SX466_.jpg" alt="">
                                         </a>
                                         <figcaption>
                                             
@@ -600,7 +621,7 @@
                                     <article>
                                         <figure>
                                         <a href="https://amzn.to/3eRfLt9" target="_blank">
-                                            <img src="https://m.media-amazon.com/images/I/61J+rHjfFoL._AC_SY355_.jpg" alt="">
+                                            <img class="img-fluid p-3" src="https://m.media-amazon.com/images/I/61J+rHjfFoL._AC_SY355_.jpg" alt="">
                                         </a>
                                         <figcaption>
                                             
@@ -618,7 +639,7 @@
                                     <article>
                                         <figure>
                                         <a href="https://amzn.to/3drlGVv" target="_blank">
-                                            <img src="https://m.media-amazon.com/images/I/81QEX6i2K-L._AC_SX466_.jpg" alt="">
+                                            <img class="img-fluid p-3" src="https://m.media-amazon.com/images/I/81QEX6i2K-L._AC_SX466_.jpg" alt="">
                                         </a>
                                         <figcaption>
                                            
@@ -636,7 +657,7 @@
                                     <article>
                                         <figure>
                                         <a href="https://amzn.to/3QY6Pjd" target="_blank">
-                                            <img src="https://m.media-amazon.com/images/I/71y3EdgHaXL._AC_SX679_.jpg" alt="">
+                                            <img class="img-fluid p-3" src="https://m.media-amazon.com/images/I/71y3EdgHaXL._AC_SX679_.jpg" alt="">
                                         </a>
                                         <figcaption>
                                             
@@ -654,7 +675,7 @@
                                     <article>
                                         <figure>
                                         <a href="https://amzn.to/3UlwKnH" target="_blank">
-                                            <img src="https://m.media-amazon.com/images/I/71vEtZJpOLL._AC_SY355_.jpg" alt="">
+                                            <img class="img-fluid p-3" src="https://m.media-amazon.com/images/I/71vEtZJpOLL._AC_SY355_.jpg" alt="">
                                         </a>
                                         <figcaption>
                                             
@@ -672,7 +693,7 @@
                                     <article>
                                         <figure>
                                         <a href="https://amzn.to/3BSnnVf" target="_blank">
-                                            <img class="img-fluid mt-3" src="https://m.media-amazon.com/images/I/7116U9cSW2L._AC_SX466_.jpg" alt="">
+                                            <img class="img-fluid p-3 " src="https://m.media-amazon.com/images/I/7116U9cSW2L._AC_SX466_.jpg" alt="">
                                         </a>
                                         <figcaption>
                                            
@@ -690,7 +711,7 @@
                                     <article>
                                         <figure>
                                         <a href="https://amzn.to/3SigUsk" target="_blank">
-                                            <img class="mt-5" src="https://m.media-amazon.com/images/I/71T2YLZ+UPL._AC_SY450_.jpg" alt="">
+                                            <img class="img-fluid p-3 mt-5" src="https://m.media-amazon.com/images/I/71T2YLZ+UPL._AC_SY450_.jpg" alt="">
                                         </a>
                                         <figcaption>
                                             
@@ -708,7 +729,7 @@
                                     <article>
                                         <figure>
                                         <a href="https://amzn.to/3Umilrq" target="_blank">
-                                            <img src="https://m.media-amazon.com/images/I/612xSI0hfZL._AC_SY355_.jpg" alt="">
+                                            <img class="img-fluid p-3" src="https://m.media-amazon.com/images/I/612xSI0hfZL._AC_SY355_.jpg" alt="">
                                         </a>
                                         <figcaption>
                                             
@@ -726,7 +747,7 @@
                                     <article>
                                         <figure>
                                         <a href="https://amzn.to/3QWhVFe" target="_blank">
-                                            <img class="img-fluid mt-3" src="https://m.media-amazon.com/images/I/6163iSO1ZrL._AC_SX466_.jpg" alt="">
+                                            <img class="img-fluid mt-3 mt-5" src="https://m.media-amazon.com/images/I/6163iSO1ZrL._AC_SX466_.jpg" alt="">
                                         </a>
                                         <figcaption>
                                             
@@ -744,7 +765,7 @@
                                     <article>
                                         <figure>
                                         <a href="https://amzn.to/3UAhtQj" target="_blank">
-                                            <img class="img-fluid" src="https://m.media-amazon.com/images/I/61EFGv0kF2L._AC_SY355_.jpg" alt="">
+                                            <img class="img-fluid p-3" src="https://m.media-amazon.com/images/I/61EFGv0kF2L._AC_SY355_.jpg" alt="">
                                         </a>
                                         <figcaption>
                                             
@@ -762,7 +783,7 @@
                                     <article>
                                         <figure>
                                         <a href="https://amzn.to/3QXizlR" target="_blank">
-                                            <img class="mt-5" src="https://m.media-amazon.com/images/I/51j11Mi7XoL._AC_SX466_.jpg" alt="">
+                                            <img class="img-fluid p-3 mt-5" src="https://m.media-amazon.com/images/I/51j11Mi7XoL._AC_SX466_.jpg" alt="">
                                         </a>
                                         <figcaption>
                                             
@@ -781,7 +802,7 @@
                                     <article>
                                         <figure>
                                         <a href="https://amzn.to/3xAYxH7" target="_blank">
-                                            <img src="https://m.media-amazon.com/images/I/31y6jA3FMML.jpg" alt="">
+                                            <img class="img-fluid p-3" src="https://m.media-amazon.com/images/I/31y6jA3FMML.jpg" alt="">
                                         </a>
                                         <figcaption>
                                         
