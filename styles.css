@@ -69,3 +69,8 @@ a{
   .price-tag {
     background: #ffae11;
   }
+
+  /*TOOLTIP*/
+  .custom-tooltip {
+    --bs-tooltip-bg: var(--bs-primary);
+  }
